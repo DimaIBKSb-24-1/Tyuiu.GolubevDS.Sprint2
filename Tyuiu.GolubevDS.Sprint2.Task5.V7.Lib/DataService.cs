@@ -8,40 +8,40 @@ public class DataService : ISprint2Task5V7
         string res;
         switch (n)
         {
-            case 1:
+            case 0:
                 res = "Январь";
                 break;
-                case 2:
+                case 1:
                 res = "Февраль";
                 break;
-                case 3:
+                case 2:
                 res = "Март";
                 break;
-                case 4:
+                case 3:
                 res = "Апрель";
                 break;
-                case 5:
+                case 4:
                 res = "Май";
                 break;
-                case 6:
+                case 5:
                 res = "Июнь";
                 break;
-                case 7:
+                case 6:
                 res = "Июль";
                 break;
-                case 8:
+                case 7:
                 res = "Август";
                 break;
-                case 9:
+                case 8:
                 res = "Сентябрь";
                 break;
-                case 10:
+                case 9:
                 res = "Октябрь";
                 break;
-                case 11:
+                case 10:
                 res = "Ноябрь";
                 break;
-                case 12:
+                case 11:
                 res = "Декабрь";
                 break;
                 default :
