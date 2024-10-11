@@ -8,18 +8,18 @@ public class DataServiceTest
     public void ValidFindMonthName()
     {
         DataService ds = new DataService();
-        Assert.AreEqual("январь", ds.FindMonthName(1990, 0));
-        Assert.AreEqual("‘евраль", ds.FindMonthName(1990, 1));
-        Assert.AreEqual("ћарт", ds.FindMonthName(1990, 2));
-        Assert.AreEqual("јпрель", ds.FindMonthName(1990, 3));
-        Assert.AreEqual("ћай", ds.FindMonthName(1990, 4));
-        Assert.AreEqual("»юнь", ds.FindMonthName(1990, 5));
-        Assert.AreEqual("»юль", ds.FindMonthName(1990, 6));
-        Assert.AreEqual("јвгуст", ds.FindMonthName(1990, 7));
-        Assert.AreEqual("—ент€брь", ds.FindMonthName(1990, 8));
-        Assert.AreEqual("ќкт€брь", ds.FindMonthName(1990, 9));
-        Assert.AreEqual("Ќо€брь", ds.FindMonthName(1990, 10));
-        Assert.AreEqual("ƒекабрь", ds.FindMonthName(1990, 11));
+        Assert.AreEqual("€нварь", ds.FindMonthName(1990, 0));
+        Assert.AreEqual("февраль", ds.FindMonthName(1990, 1));
+        Assert.AreEqual("март", ds.FindMonthName(1990, 2));
+        Assert.AreEqual("апрель", ds.FindMonthName(1990, 3));
+        Assert.AreEqual("май", ds.FindMonthName(1990, 4));
+        Assert.AreEqual("июнь", ds.FindMonthName(1990, 5));
+        Assert.AreEqual("июль", ds.FindMonthName(1990, 6));
+        Assert.AreEqual("август", ds.FindMonthName(1990, 7));
+        Assert.AreEqual("сент€брь", ds.FindMonthName(1990, 8));
+        Assert.AreEqual("окт€брь", ds.FindMonthName(1990, 9));
+        Assert.AreEqual("но€брь", ds.FindMonthName(1990, 10));
+        Assert.AreEqual("декабрь", ds.FindMonthName(1990, 11));
 
         Assert.ThrowsException<ArgumentException>(() =>
         {

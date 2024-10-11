@@ -9,40 +9,40 @@ public class DataService : ISprint2Task5V7
         switch (n)
         {
             case 0:
-                res = "Январь";
+                res = "январь";
                 break;
                 case 1:
-                res = "Февраль";
+                res = "февраль";
                 break;
                 case 2:
-                res = "Март";
+                res = "март";
                 break;
                 case 3:
-                res = "Апрель";
+                res = "апрель";
                 break;
                 case 4:
-                res = "Май";
+                res = "май";
                 break;
                 case 5:
-                res = "Июнь";
+                res = "июнь";
                 break;
                 case 6:
-                res = "Июль";
+                res = "июль";
                 break;
                 case 7:
-                res = "Август";
+                res = "август";
                 break;
                 case 8:
-                res = "Сентябрь";
+                res = "сентябрь";
                 break;
                 case 9:
-                res = "Октябрь";
+                res = "октябрь";
                 break;
                 case 10:
-                res = "Ноябрь";
+                res = "ноябрь";
                 break;
                 case 11:
-                res = "Декабрь";
+                res = "декабрь";
                 break;
                 default :
                 throw new ArgumentException($" Месяц должен быть от 1 до 12. Значение {n}");
