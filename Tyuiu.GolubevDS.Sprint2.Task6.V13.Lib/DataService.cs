@@ -5,94 +5,39 @@ public class DataService : ISprint2Task6V13
 {
     public string FindDateOfNextDay(int g, int m, int n)
     {
-        int nextDay;
-        int nextMonth;
-        int nextYear = g;
-
-        switch (m)
+        if (g <= 0 || m < 1 || m > 12 || n < 1 || n > 31)
         {
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-                if (n < 31)
-                {
-                    nextDay = n + 01;
-                    nextMonth = m;
-                }
-                else
-                {
-                    nextDay = 01;
-                    nextMonth = m + 01;
-                }
-                break;
-            case 4:
-            case 6:
-            case 9:
-            case 11:
-                if (n < 30)
-                {
-                    nextDay = n + 01;
-                    nextMonth = m;
-                }
-                else
-                {
-                    nextDay = 01;
-                    nextMonth = m + 01;
-                }
-                break;
-            case 12:
-                if (n < 31)
-                {
-                    nextDay = n + 01;
-                    nextMonth = m;
-                }
-                else
-                {
-                    nextDay = 01;
-                    nextMonth = 01;
-                    nextYear = g + 01;
-                }
-                break;
-            case 2:
-                if (IsLeapYear(g))
-                {
-                    if (n < 29)
-                    {
-                        nextDay = n + 01;
-                        nextMonth = m;
-                    }
-                    else
-                    {
-                        nextDay = 01;
-                        nextMonth = m + 01;
-                    }
-                }
-                else
-                {
-                    if (n < 28)
-                    {
-                        nextDay = n + 01;
-                        nextMonth = m;
-                    }
-                    else
-                    {
-                        nextDay = 01;
-                        nextMonth = m + 01;
-                    }
-                }
-                break;
-            default:
-                return "Некорректный номер месяца.";
+            throw new ArgumentException("Некорректная дата.");
         }
 
-        return $"Следующая дата: {nextDay}.{nextMonth}.{nextYear}";
-    }
+        
+        int[] daysInMonth = { 0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-    private bool IsLeapYear(int year)
-    {
-        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+        
+        if (n > daysInMonth[m])
+        {
+            throw new ArgumentException("Некорректная дата.");
+        }
+
+        
+        n++;
+
+        
+        if (n > daysInMonth[m])
+        {
+            n = 1;
+            m++;
+
+            
+            if (m > 12)
+            {
+                m = 1;
+                g++;
+            }
+        }
+
+     
+        return $"{n:D2}.{m:D2}.{g}";
     }
 }
+

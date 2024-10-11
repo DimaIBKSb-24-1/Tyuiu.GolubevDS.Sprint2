@@ -23,7 +23,7 @@ int g = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите месяц (1 - январь, 2 - февраль, и так далее): ");
 int m = int.Parse(Console.ReadLine());
 
-Console.WriteLine("Введите число (1 - 31): ");
+Console.WriteLine("Введите число (01 - 31): ");
 int n = int.Parse(Console.ReadLine());
 
 Console.WriteLine("***************************************************************************");
