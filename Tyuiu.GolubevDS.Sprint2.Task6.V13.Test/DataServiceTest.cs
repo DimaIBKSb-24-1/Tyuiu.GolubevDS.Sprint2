@@ -8,11 +8,15 @@ public class DataServiceTest
     public void ValidFindDateOfNextDay()
     {
         DataService ds = new DataService();
-        int g = 2000;
-        int m = 12;
-        int n = 31;
-        string res = ds.FindDateOfNextDay(g, m, n);
-        string wait = "1.1.2001";
-        Assert.AreEqual(wait, res);
+        int g = 2024;
+        int m = 03;
+        int n = 01;
+        string expected = "Следующая дата: 02.03.2024";
+
+
+        string result = ds.FindDateOfNextDay(g, m, n);
+
+
+        Assert.AreEqual(expected, result);
     }
 }
